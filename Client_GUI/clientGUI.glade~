@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="loginWindow">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Login Window</property>
+    <property name="resizable">False</property>
+    <signal name="destroy" handler="on_loginWindow_destroy" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkButton" id="loginButton">
+            <property name="label" translatable="yes">Login</property>
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_loginButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">300</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Username</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Password</property>
+          </object>
+          <packing>
+            <property name="y">80</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="usernameEntry">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="valign">start</property>
+          </object>
+          <packing>
+            <property name="x">100</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="passwordEntry">
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="valign">start</property>
+          </object>
+          <packing>
+            <property name="x">100</property>
+            <property name="y">90</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="esitoLoginLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Esito Login. </property>
+          </object>
+          <packing>
+            <property name="x">5</property>
+            <property name="y">150</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="subscribeButton">
+            <property name="label" translatable="yes">Subscribe</property>
+            <property name="width_request">100</property>
+            <property name="height_request">0</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_subscribeButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">300</property>
+            <property name="y">90</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="mainProgramWindow">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Messaggistica</property>
+    <property name="resizable">False</property>
+    <signal name="destroy" handler="on_mainProgramWindow_destroy" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkButton" id="readAllButton">
+            <property name="label" translatable="yes">Leggi Tutti</property>
+            <property name="width_request">300</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_readAllButton_clicked" swapped="no"/>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="readObjectButton">
+            <property name="label" translatable="yes">Leggi Per Oggetto</property>
+            <property name="width_request">300</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_readObjectButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="y">180</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="sendMessageButton">
+            <property name="label" translatable="yes">Invia Messaggio</property>
+            <property name="width_request">300</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_sendMessageButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="y">270</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="readSourceButton">
+            <property name="label" translatable="yes">Leggi Per Mittente</property>
+            <property name="width_request">300</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_readSourceButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="y">90</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="deleteMessageButton">
+            <property name="label" translatable="yes">Cancella</property>
+            <property name="width_request">300</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_deleteMessageButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="y">360</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="esitoOperazioneLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Esito Richiesta. </property>
+          </object>
+          <packing>
+            <property name="x">5</property>
+            <property name="y">450</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkTextBuffer" id="payloadBuffer"/>
+  <object class="GtkWindow" id="sendMessageWindow">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Invia Messaggio</property>
+    <property name="resizable">False</property>
+    <property name="gravity">south-west</property>
+    <signal name="delete-event" handler="on_sendMessageWindow_delete_event" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Destinatario</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Oggetto</property>
+          </object>
+          <packing>
+            <property name="y">50</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Contenuto</property>
+          </object>
+          <packing>
+            <property name="y">125</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entryDestinatario">
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="x">125</property>
+            <property name="y">7</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entryOggetto">
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="x">125</property>
+            <property name="y">60</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="width_request">545</property>
+            <property name="height_request">450</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTextView" id="textViewPayload">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="pixels_above_lines">2</property>
+                <property name="pixels_below_lines">2</property>
+                <property name="wrap_mode">word-char</property>
+                <property name="left_margin">3</property>
+                <property name="right_margin">3</property>
+                <property name="top_margin">1</property>
+                <property name="bottom_margin">2</property>
+                <property name="buffer">payloadBuffer</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="y">185</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="confirmSendButton">
+            <property name="label" translatable="yes">Invia Messaggio</property>
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_confirmSendButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">380</property>
+            <property name="y">35</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkTextBuffer" id="readMessagesTextBuffer"/>
+  <object class="GtkWindow" id="readMessagesWindow">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Messaggi Ricevuti</property>
+    <property name="window_position">center</property>
+    <property name="default_width">440</property>
+    <property name="default_height">500</property>
+    <signal name="delete-event" handler="on_readMessagesWindow_delete_event" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkScrolledWindow">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="shadow_type">in</property>
+        <child>
+          <object class="GtkTextView" id="readMessagesTextView">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="editable">False</property>
+            <property name="wrap_mode">word-char</property>
+            <property name="cursor_visible">False</property>
+            <property name="buffer">readMessagesTextBuffer</property>
+            <property name="overwrite">True</property>
+            <property name="monospace">True</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="searchMessageWindow">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Ricerca</property>
+    <property name="resizable">False</property>
+    <signal name="delete-event" handler="on_searchMessageWindow_delete_event" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="searchLabel">
+            <property name="width_request">100</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Campo Ricerca</property>
+          </object>
+          <packing>
+            <property name="x">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="searchEntryInfo">
+            <property name="width_request">250</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="y">50</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="searchEnterButton">
+            <property name="label" translatable="yes">Enter</property>
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_searchEnterButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkAdjustment" id="spinButtonAdj">
+    <property name="lower">-1</property>
+    <property name="upper">10</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkWindow" id="deleteMessageWindow">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Cancella Messaggio</property>
+    <property name="resizable">False</property>
+    <signal name="delete-event" handler="on_deleteMessageWindow_delete_event" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">235</property>
+            <property name="height_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Codice Messaggio Da Cancellare</property>
+          </object>
+          <packing>
+            <property name="x">5</property>
+            <property name="y">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="deleteSpinButton">
+            <property name="width_request">235</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="overwrite_mode">True</property>
+            <property name="adjustment">spinButtonAdj</property>
+            <property name="climb_rate">0.01</property>
+            <property name="numeric">True</property>
+          </object>
+          <packing>
+            <property name="x">5</property>
+            <property name="y">50</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="confirmDeleteButton">
+            <property name="label" translatable="yes">Cancella</property>
+            <property name="width_request">100</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_confirmDeleteButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">145</property>
+            <property name="y">100</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
